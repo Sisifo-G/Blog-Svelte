@@ -4,7 +4,7 @@
     background-image: none;
     border-radius: 4px;
     border: 1px solid #d9d9d9;
-    color: rgba(8, 0, 0, 0.75);
+    color: rgba(0, 0, 0, 0.75);
     display: inline-block;
     font-feature-settings: "tnum";
     font-size: 14px;
@@ -14,9 +14,10 @@
     margin: 0;
     outline: 0;
     padding: 4px 12px;
-    widows: 100%;
+    width: 100%;
     box-sizing: border-box;
   }
+
   h4 {
     font-size: 16px;
   }
@@ -30,6 +31,7 @@
     position: relative;
     width: 100%;
   }
+
   .btn {
     box-shadow: inset 0px 1px 0px 0px #bee2f9;
     background: linear-gradient(to bottom, #63b9ee 5%, #468ccf 100%);
@@ -44,9 +46,10 @@
     font-weight: bold;
     padding: 6px 24px;
     text-decoration: none;
-    text-shadow: 0px 1px 8px #7cacde;
+    text-shadow: 0px 1px 0px #7cacde;
     width: 100%;
   }
+
   .btn:hover {
     background: linear-gradient(to bottom, #468ccf 5%, #63b8ee 100%);
     background-color: #468ccf;
@@ -61,24 +64,22 @@
 </style>
 
 <div class="Newsletter">
-  <h4>Newsletter</h4>
-  <p>Recibe las últimas novedades sobre Frontend y tecnología en tu correo</p>
+  <h4>NEWSLETTER</h4>
+  <p>Recibe las ultimas novedades sobre frontend y tecnologia en tu correo</p>
+  <form
+    action="https://tinyletter.com/gndx-dev"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://tinyletter.com/gndx-dev', 'popupwindow',
+    'scrollbars=yes,width=800,height=600');return true">
+    <p>
+      <label for="tlemail">Enter your email address</label>
+    </p>
+    <p>
+      <input type="text" style="width:140px" name="email" id="tlemail" />
+    </p>
+    <input type="hidden" value="1" name="embed" />
+    <button class="btn" type="submit" value="Subscribe">Subscribirse</button>
+  </form>
+  <p>No enviamos spam.</p>
 </div>
-
-<form
-  action="https://tinyletter.com/sisifodev"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://tinyletter.com/sisifodev', 'popupwindow',
-  'scrollbars=yes,width=800,height=600');return true">
-  <p>
-    <label for="tlemail">Enter your email address</label>
-  </p>
-  <p>
-    <input type="text" style="width:140px" name="email" id="tlemail" />
-  </p>
-  <input type="hidden" value="1" name="embed" />
-  <button class="btn" type="submit" value="Subscribe">Suscribirse</button>
-
-  <p>No enviamos Spam!</p>
-</form>

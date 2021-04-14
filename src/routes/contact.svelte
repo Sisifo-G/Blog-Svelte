@@ -4,5 +4,5 @@
 
 <div class="Contact">
   <h2>Contact</h2>
-  <p>Your contact information</p>
+  <p>Your contact informacion</p>
 </div>

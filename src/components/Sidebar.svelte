@@ -2,6 +2,6 @@
   import Newsletter from "./Newsletter.svelte";
 </script>
 
-<div class="Sidebar">
+<div class="Sibebar">
   <Newsletter />
 </div>
