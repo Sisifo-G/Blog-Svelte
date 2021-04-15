@@ -1,5 +1,7 @@
 <script>
   import readingTime from "../utils/readingTime";
+  import randomEmoji from "../utils/randomEmoji";
+  import formatIsoTime from "../utils/formatIsoTime";
   export let post;
 </script>
 
@@ -23,22 +25,25 @@
   }
   .Post-title p {
     color: #333;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     margin-top: 5px;
     padding: 0;
-    word-break: break-word;
   }
+
   a {
     text-decoration: none;
     color: #22215b;
   }
+
   .Post-desc p {
     color: #333;
     font-size: 16px;
     line-height: 28px;
     margin: 0 auto;
+    word-break: break-word;
   }
+
   .dot {
     font-weight: 700;
   }
@@ -49,10 +54,14 @@
     <div class="Post-head">
       <div class="Post-title">
         <h2>
-          <a rel="prefetch" href="blog/{post.slug}">{post.title}</a>
+          <a rel="prefetch" href="blog/{post.slug}">
+            {randomEmoji()} {post.title}
+          </a>
         </h2>
         <p>
-          <time datetime={post.createdAt}>{post.createdAt}</time>
+          <time datetime={post.createdAt}>
+            📅 {formatIsoTime(post.createdAt)}
+          </time>
           <span class="dot">.</span>
           <span>{readingTime(post.html)}</span>
         </p>

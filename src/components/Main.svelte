@@ -9,7 +9,6 @@
     justify-content: center;
     align-items: center;
   }
-
   .Main-content {
     margin: 2em 0 0 0;
     display: grid;
@@ -24,7 +23,6 @@
     <div class="Main-content">
       <slot />
       <Sidebar />
-      <div class="Sidebar">Sidebar</div>
     </div>
   </div>
 </main>

@@ -1,8 +1,8 @@
 <svelte:head>
-  <title>Contact</title>
+  <title>Contactos</title>
 </svelte:head>
 
 <div class="Contact">
-  <h2>Contact</h2>
-  <p>Your contact information</p>
+  <h2>Contactos</h2>
+  <p>Your contact informacion</p>
 </div>

@@ -7,10 +7,12 @@
 
 <style>
   .Error404 {
+    height: calc(100vh - 250px);
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .Error404-image figure {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@
   }
 
   .Error404-image img {
-    width: 250px;
+    width: 350px;
     margin: 2em 0 0 0;
     transform: translateY(0px);
     animation: float 8s ease-in-out infinite;
@@ -72,7 +74,7 @@
   </div>
   <div class="Error404-image">
     <figure>
-      <img src="https://arepa.s3.amazonaws.com/img404.png" alt="Error 404" />
+      <img src="https://i.postimg.cc/DwCXW75d/ico-error-404.png" alt="error 404" />
     </figure>
   </div>
 </div>

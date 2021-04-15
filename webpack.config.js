@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const WebpackModules = require('webpack-modules');
 const path = require('path');
 const config = require('sapper/config/webpack.js');
 const pkg = require('./package.json');
@@ -58,17 +57,13 @@ module.exports = {
 						options: {
 							css: false,
 							generate: 'ssr',
-							hydratable: true,
 							dev
 						}
 					}
 				}
 			]
 		},
-		mode,
-		plugins: [
-			new WebpackModules()
-		],
+		mode: process.env.NODE_ENV,
 		performance: {
 			hints: false // it doesn't matter if server.js is large
 		}
@@ -77,6 +72,6 @@ module.exports = {
 	serviceworker: {
 		entry: config.serviceworker.entry(),
 		output: config.serviceworker.output(),
-		mode
+		mode: process.env.NODE_ENV
 	}
 };
